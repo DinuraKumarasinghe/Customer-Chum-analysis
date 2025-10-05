@@ -19,6 +19,14 @@ This project helps banks identify customers who are likely to churn (leave the b
 - **Web Dashboard**: Interactive interface for real-time predictions
 - **Feature Importance**: Insights into what drives customer churn
 
+## 🎯 Live Demo
+
+![Dashboard Screenshot](Screenshot%202025-10-04%20231803.png)
+*Main Dashboard Interface*
+
+![Prediction Results](Screenshot%202025-10-04%20231827.png)
+*Real-time Prediction Results*
+
 ## 🚀 Features
 
 ### 📈 Analysis Notebook (`customer chum analisi.ipynb`)
@@ -33,12 +41,12 @@ This project helps banks identify customers who are likely to churn (leave the b
 - Model evaluation and performance metrics
 
 ### 🌐 Streamlit Application (`Streamlit_app.py`)
-- Interactive web dashboard
-- Real-time churn probability predictions
-- Feature importance visualization
+- Interactive web dashboard with real-time predictions
+- Feature importance visualization with interactive charts
 - Customer input parameters via sidebar
-- Risk assessment and recommendations
-- Responsive design with visual indicators
+- Risk assessment with color-coded indicators
+- Actionable recommendations based on churn probability
+- Responsive design with visual metrics
 
 ## 🛠️ Installation
 
@@ -112,71 +120,125 @@ customer-churn-prediction/
 ├── customer chum analisi.ipynb   # Jupyter notebook analysis
 ├── best_model.pkl               # Trained model (generated)
 ├── scaler.pkl                   # Feature scaler (generated)
-├── Churn_Modelling.csv          # Dataset (not included in repo)
+├── Churn_Modelling.csv          # Dataset
 ├── requirements.txt             # Python dependencies
 ├── Pic 11.png                   # Sidebar image
 ├── Pic 12.png                   # Header image
+├── Screenshot 2025-10-04 231803.png  # Dashboard screenshot
+├── Screenshot 2025-10-04 231827.png  # Prediction results screenshot
 └── README.md                    # This file
 ```
 
 ## 🔧 Model Details
 
 - **Algorithm**: Random Forest Classifier
-- **Key Features**: 
-  - Age (23.75% impact)
-  - Estimated Salary (14.61% impact)
-  - Credit Score (14.31% impact)
-  - Balance (14.30% impact)
-  - Number of Products (12.77% impact)
-  - Tenure (8.14% impact)
+- **Key Features** (by importance):
+  - **Age** (23.75% impact) - Most significant predictor
+  - **Estimated Salary** (14.61% impact)
+  - **Credit Score** (14.31% impact)
+  - **Balance** (14.30% impact)
+  - **Number of Products** (12.77% impact)
+  - **Tenure** (8.14% impact)
 
-- **Performance**: 
+- **Performance Metrics**:
   - Accuracy: ~86%
   - ROC AUC: ~85%
 
-## 📊 Input Features
+## 📊 Dashboard Features
 
-The model uses 6 key customer attributes:
+### Left Panel - Feature Importance
+- Interactive horizontal bar chart showing feature impacts
+- Color-coded importance scores
+- Feature descriptions with impact percentages
 
-1. **Age**: Customer age
-2. **Estimated Salary**: Annual salary estimate
-3. **Credit Score**: Customer credit score (300-850)
-4. **Balance**: Current account balance
-5. **Number of Products**: Bank products owned (1-4)
-6. **Tenure**: Years as bank customer (0-10)
+### Right Panel - Prediction Interface
+- **Current Input Summary**: Real-time display of customer parameters
+- **Visual Metrics**: Impact indicators for each feature
+- **Prediction Button**: Triggers churn probability calculation
+- **Risk Assessment**: Color-coded results (Green/Yellow/Red)
+
+### Prediction Results Include:
+- **Churn Probability Percentage**
+- **Risk Level Indicator**
+- **Detailed Probability Breakdown**
+- **Actionable Recommendations** based on risk level
 
 ## 🎮 How to Use the Dashboard
 
-1. **Adjust Parameters**: Use the sidebar sliders and inputs to set customer attributes
-2. **View Feature Importance**: See which factors most influence churn predictions
-3. **Get Prediction**: Click "Predict Churn Probability" to see results
-4. **Interpret Results**: 
-   - **Green** (Low Risk): Probability < 40%
-   - **Orange** (Medium Risk): Probability 40-70%
-   - **Red** (High Risk): Probability > 70%
+1. **Adjust Parameters**: Use the sidebar sliders and inputs to set customer attributes:
+   - Age (18-100 years)
+   - Estimated Salary ($0-$300,000)
+   - Credit Score (300-850)
+   - Balance ($0-$300,000)
+   - Number of Products (1-4)
+   - Tenure (0-10 years)
 
-## 📈 Results Interpretation
+2. **View Feature Importance**: Understand which factors most influence churn predictions
 
-The dashboard provides:
-- **Churn Probability**: Percentage likelihood the customer will leave
-- **Risk Level**: Color-coded risk assessment
-- **Recommendations**: Actionable insights based on risk level
-- **Detailed Analysis**: Breakdown of probabilities and feature impacts
+3. **Get Prediction**: Click "🎯 Predict Churn Probability" to see real-time results
+
+4. **Interpret Results**:
+   - **🟢 LOW RISK** (< 40%): Customer likely to stay
+   - **🟡 MEDIUM RISK** (40-70%): Monitor closely
+   - **🔴 HIGH RISK** (> 70%): Immediate action needed
+
+## 📈 Risk-Based Recommendations
+
+### Low Risk (< 40%)
+```
+✅ Maintain and Grow:
+• Continue excellent service
+• Cross-sell additional products  
+• Loyalty program enrollment
+```
+
+### Medium Risk (40-70%)
+```
+⚠️ Monitor and Engage:
+• Regular check-ins
+• Product recommendation campaigns
+• Customer satisfaction survey
+```
+
+### High Risk (> 70%)
+```
+🚨 Immediate Retention Actions:
+• Proactive customer service call
+• Personalized retention offers  
+• Account review with relationship manager
+```
 
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Dataset: Synthetic customer churn data
-- Libraries: Streamlit, Scikit-learn, Plotly, Pandas, NumPy
-- Icons: Streamlit community and open-source contributors
+- **Dataset**: Synthetic customer churn data for banking sector
+- **Libraries**: Streamlit, Scikit-learn, Plotly, Pandas, NumPy
+- **Icons**: Streamlit community and open-source contributors
+- **Inspiration**: Real-world banking customer retention challenges
 
 ---
 
-**Note**: This is a demonstration project for educational purposes. Always validate models with real business data before production deployment.
+**Note**: This is a demonstration project for educational purposes. Always validate models with real business data and domain expertise before production deployment. The model performance may vary with different datasets and business contexts.
+
+---
+
+<div align="center">
+
+**Built with ❤️ using Streamlit and Scikit-learn**
+
+*Last updated: October 2024*
+
+</div>
