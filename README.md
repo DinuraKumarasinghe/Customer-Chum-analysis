@@ -25,26 +25,29 @@ This project helps banks identify customers who are likely to churn (leave the b
 *Real-time Prediction Results*
 
 
-## 🚀 Features
+## 🚀 Features by Platform
 
-### 📈 Analysis Notebook (`customer chum analisi.ipynb`)
-- Data preprocessing and cleaning
-- Exploratory Data Analysis (EDA) with visualizations
-- Feature selection using Chi-squared and Random Forest
-- Handling class imbalance with SMOTE
-- Multiple model training and comparison:
-  - Random Forest Classifier
-  - Logistic Regression
-  - XGBoost Classifier
-- Model evaluation and performance metrics
+### 📊 Power BI Dashboard
+- **Interactive Visualizations**: Drill-down customer analytics
+- **Historical Trends**: Churn patterns over time
+- **Segmentation Analysis**: Customer group comparisons
+- **KPI Monitoring**: Key performance indicators
+- **Export Capabilities**: Report generation
 
 ### 🌐 Streamlit Application (`Streamlit_app.py`)
-- Interactive web dashboard with real-time predictions
-- Feature importance visualization with interactive charts
-- Customer input parameters via sidebar
+- Real-time churn probability predictions
+- Feature importance visualization
+- Interactive customer parameter adjustment
 - Risk assessment with color-coded indicators
-- Actionable recommendations based on churn probability
-- Responsive design with visual metrics
+- Actionable recommendations
+
+### 🔬 Jupyter Notebook (`customer chum analisi.ipynb`)
+- Data preprocessing and cleaning
+- Exploratory Data Analysis (EDA)
+- Feature selection and engineering
+- Machine learning model training
+- Performance evaluation
+
 
 ## 🛠️ Installation
 
