@@ -1,4 +1,4 @@
-#Customer Churn Prediction Dashboard
+## Customer Churn Prediction Dashboard
 
 A comprehensive machine learning solution for predicting customer churn in the banking sector. This project includes both a Jupyter Notebook for analysis and model development, and an interactive Streamlit web application for real-time predictions.
 
